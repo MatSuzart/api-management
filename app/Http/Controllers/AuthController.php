@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Iluminate\Support\Facades\Validator;
 use Iluminate\Support\Facades\Auth;
 
-use App\Models\Users;
+use App\Models\User;
 use App\Models\Unit;
 
 class AuthController extends Controller
@@ -50,7 +50,7 @@ class AuthController extends Controller
             ]);
 
             if(!$token){
-                $array['error'] = 'ERROR';
+                $array['error'] = 'ERROR password';
                 return $array;
             }
 
